@@ -1,0 +1,118 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+}
+
+@import "Componente/card";
+
+.header{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #a0a0aa;
+    align-items: center;
+    position: fixed;
+    z-index: 3;  
+}
+
+.submenuCarritoCompra {
+    position: relative;
+    #carrito{
+        display: none;
+    }
+    &-imgCarrito{
+        width:50px; 
+        height:auto;
+    }
+    &:hover #carrito{
+        display: block;
+        border: black 2px solid;
+        position: absolute;
+        right:0;
+    
+        top:100%;
+        z-index: 1;
+        background-color: white;
+        padding: 20px;
+        max-height: 450px;
+        min-width: 300px;
+    }
+   
+}
+
+.boxProductAdd{
+    width: 480px;  
+    height: 110px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    
+    border-bottom: 2px solid #8D7649;
+    &-boxImg{
+        width: 22%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            
+        }
+    }
+    &-boxInfo{
+        width: 68%;
+        height: 100%;
+        &-nomProd{
+            font-weight: 400;
+            color: #8D7649;
+            font-size: 0.9em;
+            padding: 0;
+            font-family: "Montserrat", sans-serif;
+        }
+        &-precio{
+            
+            
+            &-ultimo{
+                font-size: 1em;
+                padding-top: 2px;
+                font-weight: 800;
+            }
+            &-original{
+                color: #868179;
+                font-size: 0.7em;
+                text-decoration: line-through;
+                font-weight: 500;
+            }
+        }
+    }
+    &-boxClose{
+        width: 10%;
+        height: 100%;
+        img{
+            width: 50%;
+            border-radius: 50%;
+        }
+    }
+    
+}
+
+.carrito{
+    &-titulo{
+        color: #a0a0aa;
+        font-size: 1.4em;
+        padding-right: 30px;
+        font-weight: 600;
+        text-align: left;
+        font-family: "Montserrat", sans-serif;
+    }
+    &-ProdAnadido{
+        max-height: 365px;
+        overflow: hidden;
+        overflow-y: scroll;
+    }
+}
